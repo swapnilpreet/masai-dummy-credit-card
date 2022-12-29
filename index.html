@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Style/card.css">
+    <title>card</title>
+</head>
+<body>
+        <div class="container">
+            <div>
+                <div class="card-container">
+                    <div class="front">
+                        <div class="image">
+                            <img src="golden.jpg" alt="">
+                            <img src="visa.png" alt="">
+                        </div>
+                        <div class="show-cardNumber">9412 3254 2645 1111</div>
+                        <div class="flexbox">
+                            <div class="box">
+                                <!-- <span>card holder</span> -->
+                                <div class="show-userName">user Name</div>
+                            </div>
+                            <div class="box">
+                                <span>expires</span>
+                                <div class="exp">
+                                    <span class="expMon">mm</span>
+                                    <span class="expYr">yy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="back">
+                        <div class="stripe"></div>
+                        <div class="box">
+                            <span>CVV</span>
+                            <div class="showCVV"></div>
+                            <img src="visa.png" alt="">
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+        
+            <div>
+                <form action="">
+                    <div class="inputBox">
+                        <span>card number</span>
+                        <input type="text" maxlength="16" class="card-number" placeholder="Enter Card Number">
+                    </div>
+                    <div class="inputBox">
+                        <span>card holder Name</span>
+                        <input type="text" class="user-name"  placeholder="Enter Card Holder Name">
+                    </div>
+                    <div class="flexbox">
+                        <div class="inputBox">
+                            <span>Month</span>
+                            <select name="" id="" class="monthinput">
+                                <option value="month" selected disabled>month</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>
+                        <div class="inputBox">
+                            <span>Year</span>
+                            <select name="" id="" class="yearinputBox">
+                                <option value="year" selected disabled>year</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                            </select>
+                        </div>
+                        <div class="inputBox">
+                            <span>cvv</span>
+                            <input type="text" maxlength="3" class="cvvinputBox" placeholder="Enter here CVV"/>
+                        </div>
+                    </div>
+                    <h4>Payment Amount : <span>12,500</span></h3>
+                    <input type="submit" value="Pay" class="submit-btn">
+                </form>
+
+            </div>
+        </div> 
+</body>
+
+<script>
+    document.querySelector('.card-number').oninput =()=>{
+        let number=document.querySelector('.show-cardNumber');
+        number.innerText =document.querySelector('.card-number').value;
+    }
+    document.querySelector('.user-name').oninput=()=>{
+        let name=document.querySelector('.show-userName');
+        name.innerText=document.querySelector('.user-name').value;
+    }
+    document.querySelector('.monthinput').oninput = () =>{
+        let month=document.querySelector('.expMon');
+        month.innerText = document.querySelector('.monthinput').value;
+    }
+    document.querySelector('.yearinputBox').oninput = () =>{
+        let year=document.querySelector('.expYr');
+        year.innerText = document.querySelector('.yearinputBox').value
+    }
+    document.querySelector('.cvvinputBox').onmouseenter=()=>{
+        document.querySelector('.front').style.transform='perspective(1000px) rotateY(-180deg)';
+        document.querySelector('.back').style.transform='perspective(1000px) rotateY(0deg)';
+    }
+    document.querySelector('.cvvinputBox').oninput=()=>{
+        let CVV=document.querySelector('.showCVV');
+        CVV.innerText=document.querySelector('.cvvinputBox').value
+    }
+    document.querySelector(".submit-btn").addEventListener("click", handlepayment)
+    
+    function handlepayment(){
+        window.open(href="otp.html")
+    }
+    
+    </script>
+</html>

@@ -1,0 +1,25 @@
+.conatiner{
+    margin-left: 40%;
+}
+.pin{
+    height: 80px;
+    width: 50%;
+}
+.pin input{
+    width: 70px;
+    height: 70px;
+    font-size: larger;
+    text-align: center;
+}
+button{
+    margin-top: 20px;
+    margin-left: 100px;
+    height: 50px;
+    width: 90px;
+    font-size: larger;
+    background-color: rgb(25, 114, 117);
+    border-radius: 15px;
+    color: antiquewhite;
+    border: none;
+    cursor: pointer;
+}

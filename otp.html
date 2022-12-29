@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Style/otp.css">
+    <title>opt</title>
+</head>
+<body>
+  <div class="conatiner">
+    <h1>Enter OTP</h1>
+    <div class="pin">
+        <input type="text" maxlength=1 onkeyup='tabChange(1)'>
+        <input type="text" maxlength=1 onkeyup='tabChange(2)'>
+        <input type="text" maxlength=1 onkeyup='tabChange(3)'>
+        <input type="text" maxlength=1 onkeyup='tabChange(4)'>
+      </div>
+      <button class="submit">submit</button>
+  </div>
+<script>    
+let tabChange = function(val){
+      let ele = document.querySelectorAll('input');
+      if(ele[val-1].value != ''){
+        ele[val].focus()
+      }else if(ele[val-1].value == ''){
+        ele[val-2].focus()
+      }
+    }
+   document.querySelector(".submit").addEventListener("click", handlesubmit)
+    
+    function handlesubmit(){
+        alert("Success")
+    }
+   
+    </script>
+</body>
+</html>

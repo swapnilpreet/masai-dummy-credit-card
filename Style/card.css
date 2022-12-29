@@ -1,0 +1,167 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+}
+
+.container {
+  min-height: 100vh;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row;
+  /* padding-bottom: 60px; */
+}
+
+.container form {
+  border: 1px solid rgb(104, 101, 101);
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  width: 500px;
+  margin: 20px 20px;
+}
+
+.inputBox input {
+  margin-top: 20px;
+  border-bottom: 2px solid rgb(235, 48, 88);
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+span {
+  display: block;
+  color: rgb(83, 78, 78);
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  color: rgb(36, 30, 30);
+}
+
+.flexbox {
+  display: flex;
+  gap: 15px;
+}
+.inputBox {
+  flex: 1 1 150px;
+  /* border: 1px solid red; */
+}
+
+.submit-btn {
+  width: 50%;
+  background-color: rgb(235, 48, 88);
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.card-container {
+  margin-bottom: -150px;
+  position: relative;
+  height: 250px;
+  width: 400px;
+}
+.front {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(235, 48, 88);
+  border-radius: 5px;
+  backface-visibility: hidden;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transform: perspective(1000px) rotateY(0deg);
+  transition: transform 0.4s ease-out;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.image img {
+  height: 50px;
+}
+
+.show-cardNumber {
+  padding: 30px 10px;
+  font-size: 22px;
+  color: #fff;
+  /* border: 1px solid red; */
+}
+
+.flexbox {
+  display: flex;
+}
+.box:nth-child(1) {
+  margin-right: auto;
+}
+.box {
+  font-size: 15px;
+  color: #fff;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(235, 48, 88);
+  border-radius: 5px;
+  padding: 20px 0;
+  text-align: right;
+  backface-visibility: hidden;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  transform: perspective(1000px) rotateY(180deg);
+  transition: transform 0.4s ease-out;
+}
+h4 span {
+  margin-top: 20px;
+  color: rgb(235, 48, 88);
+  display: flex;
+}
+.stripe {
+  background: #000;
+  width: 100%;
+  margin: 10px 0;
+  height: 50px;
+}
+.box {
+  padding: 0 20px;
+}
+
+.box span {
+  color: #fff;
+  font-size: 15px;
+}
+
+.showCVV {
+  height: 50px;
+  padding: 10px;
+  margin-top: 5px;
+  color: #333;
+  background: #fff;
+  width: 90%;
+}
+.box img {
+  margin-top: 30px;
+  height: 30px;
+  /* border: 1px solid red; */
+}
